@@ -1,0 +1,578 @@
+@CHARSET "ISO-8859-1";
+
+@font-face {
+	font-family: Josefin_Sans;
+/* 	src: url(../fonts/Josefin_Sans/JosefinSans-Regular.ttf); */
+}
+
+@font-face {
+	font-family: Josefin_Sans;
+	/* src: url(../fonts/Josefin_Sans/JosefinSans-Bold.ttf); */
+	font-weight: bold;
+}
+
+html {
+	color: #5f6867;
+	font-family: Josefin_Sans;
+	/*background-image: url("customImages/truperLogo.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 20%;
+	background-color: rgb(63, 81, 90);*/
+}
+
+body {
+	color: #5f6867;
+	font-family: Josefin_Sans;
+	background-color: white;
+	margin: 0px;
+}
+
+input:required:invalid {
+	/* la imagen es para mostrar un asterisquito de requerido */
+	background-image: url("../img/required.png");
+	background-repeat: no-repeat;
+	background-position: right center;
+	border: 1px solid #dadada;
+	/*Este pone los campos incorrectos en rojito*/
+	/* border: 1px solid #FF6C6C; */
+	border-radius: 3px;
+}
+
+input[type="radio"]:required:invalid+label {
+	color: #FF6C6C;
+}
+
+input {
+	border: .1em solid #dadada;
+	border-radius: .4em;
+	padding: .2em;
+	margin: .2em;
+}
+
+input:required:valid {
+	border: 1px solid #dadada;
+}
+
+input[type="file"] {
+	-webkit-appearance: initial;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-appearance: textfield;
+	margin-right: 0;
+	display: inline-block;
+}
+
+input[type="button"] {
+	border: 0em;
+	border-radius: .5em;
+	background-color: #3F515A;
+	color: #FFFFFF;
+	padding: .4em .6em;
+	font-weight: bold;
+	margin: .4em .2em;
+	font-family: Josefin_Sans;
+}
+
+input[type="submit"] {
+	border: 0em;
+	border-radius: .5em;
+	background-color: #3F515A;
+	color: #FFFFFF;
+	padding: .4em .6em;
+	font-weight: bold;
+	margin: .4em .2em;
+	font-family: Josefin_Sans;
+}
+
+select:required:invalid {
+	/* este comentario es para mostrar un asterisquito de requerido */
+	/*background-image: url("customImages/required.png");
+	background-repeat: no-repeat;
+	background-position: left center;*/
+	border: 1px solid #FF6C6C;
+	border-radius: 3px;
+}
+
+select {
+	border: .1em solid #dadada;
+	border-radius: .4em;
+	padding: .2em;
+}
+
+select option[disabled] {
+	color: #C5C5C5;
+}
+
+textarea {
+	height: 5em;
+	padding: .3em .4em;
+	border: .1em solid #dadada;
+	border-radius: .5em;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+textarea:required:invalid {
+	/* la imagen es para mostrar un asterisquito de requerido */
+	background-image: url("../img/required.png");
+	background-repeat: no-repeat;
+	background-position: right center;
+	/*Este pone los campos incorrectos en rojito*/
+	/* border: 1px solid #FF6C6C; */
+}
+
+button {
+	border: 0em;
+	border-radius: .5em;
+	background-color: #3F515A;
+	color: #FFFFFF;
+	padding: .3em .5em;
+	font-weight: bold;
+	margin: .2em .01em;
+	font-family: Josefin_Sans;
+	cursor: pointer;
+}
+
+.infoButton {
+	border-bottom: .1em dashed #337AB6;
+	background-color: inherit;
+	color: #3F515A;
+	padding: .1em .6em;
+	font-weight: bold;
+	margin: .4em .2em;
+	font-family: Josefin_Sans;
+	border-radius: inherit;
+}
+
+label {
+	font-weight: bold;
+	display: inline-block;
+	margin: .3em 0em .1em 0em;
+}
+
+a {
+	cursor: pointer;
+	font-weight: bold;
+	/* padding: .5em; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: .3em;
+	margin-bottom: .3em;
+}
+
+p {
+	margin: 0;
+}
+
+/* .label {
+	padding: .1em;
+} */
+.backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000;
+}
+
+.menuButton {
+	display: none;
+}
+
+.contentSRM {
+	padding: .5em;
+}
+
+.cabeceraSRM {
+	background-color: #3F515A;
+	height: 3em;
+	color: #FFFFFF;
+}
+
+.menuBandeja {
+	width: 23%;
+	display: inline-block;
+	vertical-align: top;
+	padding: .2em;
+}
+
+.bandeja {
+	width: 75%;
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+}
+
+.divEncabezado {
+	width: 22em;
+	margin: .2em;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.divEncabezado label {
+	width: 100%;
+}
+
+.shortDivEncabezado {
+	width: 15em;
+}
+
+#idPoContentDiv label {
+	width: 100%;
+}
+
+.scrollableSmallDetail {
+	overflow: auto;
+	display: block;
+	border-radius: .5em;
+}
+
+.scrollableDetail {
+	overflow: auto;
+	display: block;
+	border-radius: .5em;
+	padding: .3em;
+}
+
+.fancyTable {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.fancyTable td, .fancyTable th {
+	padding: 0.4em !important;
+}
+
+.fancyTable th {
+	background-color: #3F515A;
+	color: #ffffff;
+	text-align: center;
+}
+
+/* .fancyTable tr th:FIRST-CHILD {
+	border-top-left-radius: .7em;
+}
+
+.fancyTable tr th:LAST-CHILD {
+	border-top-right-radius: .7em;
+} */
+.fancyTable>tbody>tr:nth-child(even) {
+	background: #FAFAFA;
+}
+
+.fancyTable>tbody>tr:nth-child(odd) {
+	background: #F1F1F1;
+}
+
+.fancyTable tr {
+	border-bottom: .1em solid #F7F7F7;
+}
+
+.filtersTable {
+	width: 100%;
+	border-collapse: collapse;
+	/* text-align: center; */
+}
+
+.filtersTable td, .filtersTable th {
+	padding: .4em .8em;
+	border-bottom: 2em black;
+}
+
+.filtersTable th {
+	padding: .5em;
+	/* text-align: center; */
+	font-size: 1.2em;
+}
+
+.filtersTable>tbody>tr:nth-child(odd) {
+	
+}
+
+.filtersTable tr {
+	border-bottom: .1em solid #C3C3C3;
+}
+
+.selectableTable tr:hover {
+	color: #000000;
+	cursor: pointer;
+	background: #f5f5f5 !important;
+}
+
+.loginDiv {
+	
+}
+
+.loginForm {
+	width: 30em;
+	background: rgba(0, 0, 0, 0.36);
+	padding: 3em;
+	border-radius: 2em;
+	margin: 5em auto;
+	color: whitesmoke;
+}
+
+.loginForm input {
+	border-radius: .5em;
+	color: #5f6867;
+	padding: .4em .5em;
+	font-weight: bold;
+	margin: .2em .1em;
+}
+
+::-webkit-scrollbar {
+	width: .8em;
+	height: .8em;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #F2F2F2;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #3F515A;
+}
+
+::-webkit-scrollbar-corner {
+	background-color: #F2F2F2;
+}
+
+::-webkit-file-upload-button {
+	border: 0em;
+	border-radius: .5em;
+	background-color: #337AB7;
+	color: #FFFFFF;
+	padding: .2em .6em;
+	font-weight: bold;
+	font-family: Josefin_Sans;
+}
+
+.modal-dialog {
+	/* 	width: 90%; */
+	
+}
+
+#cargaControllerID {
+	margin: 1em auto;
+	width: 40em;
+}
+
+#cargaControllerID>div {
+	margin-top: .6em;
+}
+
+#cargaControllerID>div>div {
+	margin: .4em;
+}
+
+.importantButton {
+	background-color: #337AB7 !important;
+}
+
+.floatingElement {
+	margin: 1em;
+	width: 40em;
+	display: inline-block;
+	background: white;
+	padding: 1em;
+}
+
+.dash {
+	width: 40em;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+.dash div div {
+	background-color: #F1F1F1;
+	border-radius: 1em;
+	color: #5f6867;
+	font-weight: bolder;
+	padding: .1em;
+	margin: .2em;
+	text-align: center;
+	cursor: pointer;
+}
+
+.dash div div:hover {
+	background-color: #CECECE;
+	color: black;
+}
+
+.dash div div span {
+	color: #5f6867;
+}
+
+.dashDiv {
+	width: 19em;
+}
+
+.bootAlertSRM {
+	border: 1px solid transparent;
+	border-radius: .5em;
+	padding-left: 1em;
+}
+
+.cintilloEncabezado {
+	text-align: center;
+	font-size: 1.2em;
+	color: white;
+	font-weight: bold;
+}
+
+.htmlStyle {
+	background-image: url('../img/carretillaLogin.jpg');
+	background-size: cover;
+}
+
+.dashboardContent {
+	width: 83em;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 2.5em;
+	height: 1.6em;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 1em;
+	width: 1em;
+	left: .3em;
+	bottom: .3em;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: #337ab7;
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px #337ab7;
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(.9em);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+@media only screen and (max-device-width: 480px) {
+	.dashboardContent {
+		width: inherit;
+	}
+	.dash {
+		width: inherit;
+	}
+	.dashDiagram {
+		display: none;
+	}
+	.htmlStyle {
+		background-image: url('../img/carretillaLoginM.jpg');
+		background-size: cover;
+	}
+	body {
+		font-size: 1.5em;
+	}
+	.loginForm {
+		width: initial;
+	}
+	.loginDiv {
+		margin: .5em;
+		margin-top: 3em;
+	}
+	::-webkit-scrollbar {
+		width: .4em;
+		height: .4em;
+	}
+	select {
+		background-color: #FFFFFF;
+	}
+	#idPoContentDiv div {
+		margin: .2em 0em;
+		vertical-align: top;
+		display: inline-block;
+		width: 49%;
+	}
+	.contentSRM {
+		padding: .1em;
+		height: 90%;
+	}
+	.menuBandeja {
+		width: 80%;
+		display: none;
+	}
+	.menuBandejaPressed {
+		width: 80%;
+		display: block;
+		position: absolute;
+		background-color: white;
+		height: 90%;
+	}
+	.bandeja {
+		width: 100%;
+		display: block;
+		vertical-align: top;
+	}
+	.menuButton {
+		display: inline-block;
+		height: 100%;
+	}
+	.fancyTable tr {
+		height: 4em;
+	}
+	#cargaControllerID {
+		margin: inherit;
+		width: inherit;
+	}
+}
+
+.vertical-middle {
+	vertical-align: middle !important;
+}
+
+.newDivClass {
+	display: inline-block;
+	padding-left: .7em;
+	padding-right: .7em;
+	text-align: left;
+	min-width: 6em;
+	/* background: radial-gradient(#fbfbfb, white, white); */
+}

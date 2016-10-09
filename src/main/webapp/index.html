@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- jQuery -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- AngularJS -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<!-- EstilosComunes -->
+<link href="css/common.css" rel="stylesheet">
+<script src="js/jQueryStuff.js"></script>
+<script src="js/AngularJS_Stuff.js"></script>
+</head>
+<body>
+	<div style="padding: 1em 3em;">
+		<h1>REST COURSE!!!!</h1>
+		<h2>jQuery!!!!</h2>
+		<input type="button" onclick="ajaxGET();" value="GET EX">
+		<label>ID</label>
+		<input id="inputPOST_ID">
+		<input type="button" onclick="ajaxPOST()" value="POST EX">
+		<textarea id="responseAriaID"></textarea>
+		<h2>AngularJS!!!!</h2>
+		<div ng-app="restApp">
+			<div ng-controller="restController">
+				<input ng-model="model.id">
+				<p>Tu dato de prueba: {{model.id}}</p>
+				<input type="button" value="GET EX" ng-click="get()">
+				<input type="button" value="POST EX" ng-click="post(model)">
+				<table class="fancyTable">
+					<tr>
+						<th>Cadena</th>
+						<th>Entero</th>
+					</tr>
+					<tr ng-repeat="o in pocs">
+						<td ng-bind="o.cadena"></td>
+						<td ng-bind="o.entero"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
